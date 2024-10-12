@@ -29,3 +29,10 @@ vim.api.nvim_set_keymap("n", "j", "k", {
 vim.keymap.set("n", "<C-n>", "<Cmd>bn<CR>")
 -- Switch to the previous file
 vim.keymap.set("n", "<C-p>", "<Cmd>bp<CR>")
+
+-- Copilot
+vim.keymap.set("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false,
+})
+vim.g.copilot_no_tab_map = true
